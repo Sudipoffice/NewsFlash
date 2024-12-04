@@ -1,5 +1,4 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import throttle from "lodash.throttle";
 import HomeNews from "./HomeNews";
 
 const Home = ({ scrollY, setScrollY }) => {
@@ -213,6 +212,20 @@ const Home = ({ scrollY, setScrollY }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // preload images
+  useEffect(() => {
+    cameraFrames.forEach((frame) => {
+      const img = new Image();
+      img.src = frame;
+    });
+  
+    mobileFrames.forEach((frame) => {
+      const img = new Image();
+      img.src = frame;
+    });
+  }, [cameraFrames, mobileFrames]);
+  
 
   //  Desktop
   useEffect(() => {

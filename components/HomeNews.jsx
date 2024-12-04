@@ -82,7 +82,7 @@ const HomeNews = () => {
   return (
     <>
     <div
-      className=" w-screen relative h-fit md:h-fit hidden md:flex flex-col  items-center p-2 md:p-12 responsive-homenews"
+      className=" w-screen relative h-fit md:h-fit hidden md:flex flex-col  items-center p-2 md:p-12 responsive-homenews "
       style={{
         // 2400
         opacity: scrollY < 2400 ? 0 : 1,
