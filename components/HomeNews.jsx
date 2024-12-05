@@ -60,10 +60,7 @@ const HomeNews = () => {
     return (
       <div
         className="w-screen  min-h-full flex flex-col justify-center items-center py-8 md:py-24"
-        style={{
-          opacity: scrollY < 2400 ? 0 : 1,
-          transition: "opacity 0.2s ease-in",
-        }}
+        
       >
         <header
           className="text-xl md:text-7xl font-bold text-black py-0 md:py-10"
@@ -82,12 +79,12 @@ const HomeNews = () => {
   return (
     <>
     <div
-      className=" w-screen relative h-fit md:h-fit hidden md:flex flex-col  items-center p-2 md:p-12 responsive-homenews "
-      style={{
-        // 2400
-        opacity: scrollY < 2400 ? 0 : 1,
-        transition: "opacity 0.2s ease-in",
-      }}
+      className=" w-screen relative h-fit md:h-fit hidden md:flex flex-col  items-center py-0 px-2 md:px-12 responsive-homenews "
+      // style={{
+      //   // 2400
+      //   opacity: scrollY < 2400 ? 0 : 1,
+      //   transition: "opacity 0.2s ease-in",
+      // }}
     >
       <header
         className="text-xl md:text-7xl font-bold text-black py-0 md:py-10"
@@ -310,11 +307,12 @@ const HomeNews = () => {
         </div>
       </div>
     </div>
+    {/* Mobile */}
     <div
       className=" w-screen relative h-fit md:h-fit md:hidden flex flex-col  items-center p-0 responsive-homenews"
       style={{
         // 2400
-        opacity: scrollY < 1850 ? 0 : 1,
+        opacity: scrollY < 1 ? 0 : 1,
         transition: "opacity 0.2s ease-in",
       }}
     >

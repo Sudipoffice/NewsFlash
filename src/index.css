@@ -8,10 +8,10 @@ html, body, #root{
     margin: 0;
     padding: 0;
     font-family: "Lexend", sans-serif;
-    overscroll-behavior: none;
+    /* overscroll-behavior: none;
     scroll-behavior: smooth;
     -ms-overflow-style: none;  
-    scrollbar-width: none; 
+    scrollbar-width: none;  */
 }
 .camera, .icons{
     user-drag: none;
