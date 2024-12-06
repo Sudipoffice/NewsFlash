@@ -66,7 +66,7 @@ const TrendingNews = () => {
   }
 
 
-   if (!newsApi.length && !nytNews.length) {
+   if (!newsApi.length || !nytNews.length) {
     return (<div
       className="w-screen  min-h-full flex flex-col justify-center items-center py-2 md:py-24"
     ><header
