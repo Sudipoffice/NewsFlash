@@ -28,7 +28,7 @@ function App() {
     <Route path="/detailedNews" element={<DetailedNews/>}/>
     <Route path="/detailedCategoriesNews" element={<DetailedCategoriesNews/>}/>
     </Routes>
-    {/* <Footer/> */}
+    <Footer/>
     </BrowserRouter>
     
   )

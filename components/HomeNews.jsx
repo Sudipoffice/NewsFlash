@@ -56,6 +56,15 @@ const HomeNews = () => {
     );
   };
 
+  const [scrollY, setScrollY] = useState(0);
+    useEffect(() => {
+      const handleScroll = () => {
+        setScrollY(window.scrollY); 
+      };
+      window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll); // Cleanup
+  }, []);
+
   if (topStories.length === 0) {
     return (
       <div
@@ -79,12 +88,11 @@ const HomeNews = () => {
   return (
     <>
     <div
-      className=" w-screen relative h-fit md:h-fit hidden md:flex flex-col  items-center py-0 px-2 md:px-12 responsive-homenews "
-      // style={{
-      //   // 2400
-      //   opacity: scrollY < 2400 ? 0 : 1,
-      //   transition: "opacity 0.2s ease-in",
-      // }}
+      className=" w-screen relative h-fit hidden md:flex flex-col  items-center py-0 px-2 md:px-12 "
+      style={{
+        opacity: scrollY < 1650 ? 0 : 1,
+        transition: "opacity 0.2s ease-in",
+      }}
     >
       <header
         className="text-xl md:text-7xl font-bold text-black py-0 md:py-10"
@@ -309,10 +317,9 @@ const HomeNews = () => {
     </div>
     {/* Mobile */}
     <div
-      className=" w-screen relative h-fit md:h-fit md:hidden flex flex-col  items-center p-0 responsive-homenews"
+      className=" w-screen relative h-fit md:h-fit md:hidden flex flex-col  items-center p-0 "
       style={{
-        // 2400
-        opacity: scrollY < 1 ? 0 : 1,
+        opacity: scrollY < 1250 ? 0 : 1,
         transition: "opacity 0.2s ease-in",
       }}
     >
